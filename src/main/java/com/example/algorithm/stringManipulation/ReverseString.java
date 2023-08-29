@@ -10,7 +10,9 @@ import java.util.List;
 public class ReverseString {
 
     public static char[] reverseString(char[] s) {
+        
         int left = 0, right = s.length - 1;
+        
         while (left < right) {
             char temp = s[left];
             s[left] = s[right];
@@ -18,18 +20,24 @@ public class ReverseString {
             left++;
             right--;
         }
+        
         return s;
     }
 
     public static char[] reverseStringPythonic(char[] s) {
+        
         List<Character> charList = new ArrayList<>();
+        
         for (char c : s) {
             charList.add(c);
         }
+        
         Collections.reverse(charList);
+        
         for (int i = 0; i < s.length; i++) {
             s[i] = charList.get(i);
         }
+        
         return s;
     }
 
